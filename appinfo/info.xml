@@ -14,6 +14,7 @@
 	<version>3.2.1</version>
 	<licence>agpl</licence>
 	<author mail="jus@bitgrid.net">Julius Härtl</author>
+  <author>Built by VTS</author>
 	<namespace>Text</namespace>
 	<default_enable/>
 	<types>

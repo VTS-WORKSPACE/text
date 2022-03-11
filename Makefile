@@ -2,7 +2,7 @@
 # later. See the COPYING file.
 app_name=$(notdir $(CURDIR))
 
-all: dev-setup lint build-js-production test
+all: dev-setup build-js-production release
 
 # Dev env management
 dev-setup: clean clean-dev npm-init
@@ -65,3 +65,6 @@ clean-dev:
 clean-git:
 	rm -r js/
 	git checkout -- js/
+
+release:
+	zip -r release.zip . -x "node_modules/*" "tests/*" "vendor/*" ".github/*" ".git"
