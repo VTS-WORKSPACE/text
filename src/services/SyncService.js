@@ -135,7 +135,7 @@ class SyncService {
 	}
 
 	_openDocument({ fileId, filePath }) {
-		return axios.put(endpointUrl('session/create', !!this.options.shareToken), {
+		return axios.post(endpointUrl('session/create', !!this.options.shareToken), {
 			fileId,
 			filePath,
 			token: this.options.shareToken,
